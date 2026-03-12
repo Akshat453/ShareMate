@@ -10,6 +10,20 @@ A full-stack community platform for collaborative activities, resource sharing, 
 - **Real-time:** Socket.io
 - **Design:** Custom warm dark theme with gold accents, Playfair Display + DM Sans typography
 
+## Live Demo
+
+Frontend: https://share-mate-mauve.vercel.app/  
+Backend API: https://sharemate-api.onrender.com/api
+
+## Demo Credentials
+
+Use the following account to explore the platform:
+
+Email: arjun@sharemate.com  
+Password: password123
+
+Or you can register a new account directly from the application.
+
 ## Setup
 
 ### Prerequisites
