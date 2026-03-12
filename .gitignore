@@ -1,0 +1,114 @@
+# ShareMate — .gitignore
+# Generated for: React + Node.js + Express + MongoDB project
+# Last updated: 2026-03-12
+
+# ═══════════════════════════════════════════════
+# 1. ENVIRONMENT & SECRETS
+# ═══════════════════════════════════════════════
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+.env.*.local
+server/.env
+client/.env
+client/.env.local
+
+# ═══════════════════════════════════════════════
+# 2. NODE MODULES
+# ═══════════════════════════════════════════════
+node_modules/
+
+# ═══════════════════════════════════════════════
+# 3. BUILD & DIST OUTPUTS
+# ═══════════════════════════════════════════════
+dist/
+build/
+
+# ═══════════════════════════════════════════════
+# 4. VITE SPECIFIC
+# ═══════════════════════════════════════════════
+.vite/
+*.local
+
+# ═══════════════════════════════════════════════
+# 5. LOGS
+# ═══════════════════════════════════════════════
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+server/logs/*
+!server/logs/.gitkeep
+
+# ═══════════════════════════════════════════════
+# 6. UPLOADED FILES (local multer temp storage)
+# ═══════════════════════════════════════════════
+server/uploads/*
+!server/uploads/.gitkeep
+server/temp/*
+!server/temp/.gitkeep
+public/uploads/
+
+# ═══════════════════════════════════════════════
+# 7. OS FILES
+# ═══════════════════════════════════════════════
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ═══════════════════════════════════════════════
+# 8. EDITOR & IDE FILES
+# ═══════════════════════════════════════════════
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history/
+
+# ═══════════════════════════════════════════════
+# 9. COVERAGE & TESTING
+# ═══════════════════════════════════════════════
+coverage/
+.nyc_output/
+*.lcov
+.jest-cache/
+
+# ═══════════════════════════════════════════════
+# 10. CACHE DIRECTORIES
+# ═══════════════════════════════════════════════
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# ═══════════════════════════════════════════════
+# 11. PACKAGE MANAGER LOCKS
+# ═══════════════════════════════════════════════
+# Standard practice is to KEEP lock files for reproducible installs.
+# Uncomment below ONLY if you want to ignore lock files:
+# package-lock.json
+# yarn.lock
+
+# ═══════════════════════════════════════════════
+# 12. CLOUDINARY / MULTER TEMP
+# ═══════════════════════════════════════════════
+*.tmp
+*.temp
+
+# ═══════════════════════════════════════════════
+# 13. SEED OUTPUT / DEBUG FILES
+# ═══════════════════════════════════════════════
+seed-output.json
+debug.log
+error.log

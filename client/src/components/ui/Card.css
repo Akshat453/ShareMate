@@ -1,0 +1,59 @@
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card--hover:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--shadow-glow);
+}
+
+.card--hover:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent-primary);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+.card--glow {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.card__body {
+  padding: var(--space-lg);
+}
+
+.card__tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card__tag--charity { background: rgba(123, 198, 126, 0.15); color: var(--accent-green); }
+.card__tag--environment { background: rgba(91, 155, 213, 0.15); color: var(--accent-blue); }
+.card__tag--health { background: rgba(212, 106, 106, 0.15); color: var(--accent-red); }
+.card__tag--education { background: rgba(155, 126, 212, 0.15); color: var(--accent-purple); }
+.card__tag--community { background: rgba(232, 197, 71, 0.15); color: var(--accent-primary); }
+.card__tag--sports { background: rgba(212, 132, 90, 0.15); color: var(--accent-secondary); }
+.card__tag--arts { background: rgba(212, 132, 90, 0.15); color: var(--accent-secondary); }
+.card__tag--other { background: rgba(160, 152, 128, 0.15); color: var(--text-secondary); }

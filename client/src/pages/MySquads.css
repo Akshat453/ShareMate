@@ -1,0 +1,50 @@
+.my-squads { max-width: var(--max-width); margin: 0 auto; padding: var(--space-2xl) var(--space-lg); }
+
+.my-squads__header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: var(--space-xl);
+}
+.my-squads__title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); }
+.my-squads__subtitle { color: var(--text-secondary); margin-top: 0.3rem; }
+
+/* Tabs */
+.my-squads__tabs {
+  display: flex; gap: 0; border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-xl);
+}
+.my-squads__tab {
+  padding: 0.75rem 1.5rem;
+  background: none; border: none;
+  color: var(--text-muted); font-size: 0.9rem; font-weight: 500;
+  cursor: pointer; position: relative;
+  font-family: var(--font-body);
+  transition: color var(--transition-fast);
+}
+.my-squads__tab:hover { color: var(--text-primary); }
+.my-squads__tab--active {
+  color: var(--accent-primary);
+}
+.my-squads__tab--active::after {
+  content: ''; position: absolute;
+  bottom: -1px; left: 0; right: 0; height: 2px;
+  background: var(--accent-primary);
+}
+
+/* Grid */
+.my-squads__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Empty */
+.my-squads__empty {
+  text-align: center; padding: 4rem 0;
+  color: var(--text-muted);
+}
+.my-squads__empty p { margin: 0.75rem 0 1.5rem; }
+
+@media (max-width: 640px) {
+  .my-squads__grid { grid-template-columns: 1fr; }
+  .my-squads__header { flex-direction: column; gap: 1rem; }
+}
