@@ -12,7 +12,10 @@
 /* Mesh gradient background */
 .hero__mesh {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background:
     radial-gradient(ellipse at 20% 50%, rgba(232, 197, 71, 0.12) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 20%, rgba(212, 132, 90, 0.1) 0%, transparent 50%),
@@ -25,7 +28,10 @@
 /* Dot grid pattern */
 .hero__dots {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
   background-size: 40px 40px;
   opacity: 0.3;
@@ -69,7 +75,10 @@
   flex-wrap: wrap;
   margin-bottom: var(--space-3xl);
 }
-.hero__cta a { text-decoration: none; }
+
+.hero__cta a {
+  text-decoration: none;
+}
 
 /* Stats */
 .hero__stats {
@@ -80,7 +89,10 @@
   flex-wrap: wrap;
 }
 
-.hero__stat { text-align: center; }
+.hero__stat {
+  text-align: center;
+}
+
 .hero__stat-number {
   display: block;
   font-family: var(--font-display);
@@ -88,6 +100,7 @@
   font-weight: 700;
   color: var(--accent-primary);
 }
+
 .hero__stat-label {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -95,6 +108,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
 .hero__stat-divider {
   width: 1px;
   height: 40px;
@@ -104,7 +118,10 @@
 /* Floating Cards */
 .hero__floating-cards {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   pointer-events: none;
   z-index: 1;
 }
@@ -120,10 +137,29 @@
   backdrop-filter: blur(8px);
 }
 
-.hero__float-card--1 { top: 15%; left: 5%; transform: rotate(-5deg); }
-.hero__float-card--2 { top: 10%; right: 5%; transform: rotate(4deg); }
-.hero__float-card--3 { bottom: 20%; left: 8%; transform: rotate(3deg); }
-.hero__float-card--4 { bottom: 15%; right: 8%; transform: rotate(-3deg); }
+.hero__float-card--1 {
+  top: 15%;
+  left: 5%;
+  transform: rotate(-5deg);
+}
+
+.hero__float-card--2 {
+  top: 10%;
+  right: 5%;
+  transform: rotate(4deg);
+}
+
+.hero__float-card--3 {
+  bottom: 20%;
+  left: 8%;
+  transform: rotate(3deg);
+}
+
+.hero__float-card--4 {
+  bottom: 15%;
+  right: 8%;
+  transform: rotate(-3deg);
+}
 
 .hero__float-title {
   font-family: var(--font-display);
@@ -180,7 +216,9 @@
 .features__card {
   text-align: center;
   cursor: default;
+  height: 100%;
 }
+
 
 .features__icon {
   font-size: 2.5rem;
@@ -195,9 +233,7 @@
 }
 
 .features__card-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  min-height: 60px;
 }
 
 /* ========== CTA ========== */
@@ -218,7 +254,10 @@
 .cta-box::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background:
     radial-gradient(ellipse at 30% 50%, rgba(232, 197, 71, 0.06) 0%, transparent 60%),
     radial-gradient(ellipse at 70% 50%, rgba(212, 132, 90, 0.04) 0%, transparent 60%);
@@ -239,7 +278,10 @@
   position: relative;
 }
 
-.cta-box a { text-decoration: none; position: relative; }
+.cta-box a {
+  text-decoration: none;
+  position: relative;
+}
 
 /* ========== FOOTER ========== */
 .footer {
@@ -266,18 +308,23 @@
   display: flex;
   gap: var(--space-lg);
 }
+
 .footer__links a {
   color: var(--text-secondary);
   font-size: 0.92rem;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
-.footer__links a:hover { color: var(--accent-primary); }
+
+.footer__links a:hover {
+  color: var(--accent-primary);
+}
 
 .footer__bottom {
   border-top: 1px solid var(--border);
   padding-top: var(--space-lg);
 }
+
 .footer__bottom p {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -285,8 +332,19 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-  .hero__floating-cards { display: none; }
-  .hero__stats { gap: var(--space-lg); }
-  .hero__stat-divider { display: none; }
-  .features__grid { grid-template-columns: 1fr; }
+  .hero__floating-cards {
+    display: none;
+  }
+
+  .hero__stats {
+    gap: var(--space-lg);
+  }
+
+  .hero__stat-divider {
+    display: none;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
 }
